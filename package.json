@@ -1,7 +1,7 @@
 {
   "name": "Covid19 Greek Camps",
   "description": "Χάρτης COVID-19 κρουσμάτων στα camps μεταναστών",
-  "homepage": "https://kostasp4.sg-host.com/",
+  "homepage": "https://kostasp3.sg-host.com/",
   "version": "3.2.0",
   "author": "Konstantinos Pap",
   "dependencies": {

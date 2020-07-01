@@ -27,19 +27,16 @@ import {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="container" navbar>
           <NavItem>
-            <Link to="/">Χωρητικότητα ανα δομή</Link>
-            </NavItem>
-          <NavItem>
             <Link to="/">Κρούσματα COVID19 ανα δομή</Link>
             </NavItem>
             <NavItem>
             <Link to="/geolocate/">Εντοπισμός των Camps στην περιοχή μου</Link>
             </NavItem>
             <NavItem>
-            <a style={{ color: 'greenyellow' }} href="http://kostasp4.sg-host.com/">ΤΕΣΤΣ ΠΟΥ ΕΓΙΝΑΝ</a>
+            <a style={{ color: 'greenyellow' }} href="http://kostasp3.sg-host.com/">TIME SERIES</a>
             </NavItem>
           </Nav>
-          <NavbarText><Button color="success" border-radius= "20" href="http://kostasp4.sg-host.com/" target="_blank">ΣΤΑΤΙΣΤΙΚΑ</Button>{''}</NavbarText>
+          <NavbarText><Button color="success" border-radius= "20" href="http://kostasp3.sg-host.com/" target="_blank">ΣΤΑΤΙΣΤΙΚΑ Graphjs</Button>{''}</NavbarText>
         </Collapse>
       </Navbar>
     </div>

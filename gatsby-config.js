@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://kostasp4.sg-host.com/',
+    siteUrl: 'https://kostasp3.sg-host.com/',
       title: 'Χάρτης COVID19',
       description: 'Χάρτης COVID-19 κρουσμάτων στα camps μεταναστών',
       author: 'Konstantinos Pap'
