@@ -1,0 +1,60 @@
+{
+  "name": "Covid19 Greek Camps",
+  "description": "Χάρτης COVID-19 κρουσμάτων στα camps μεταναστών",
+  "homepage": "https://kostasp4.sg-host.com/",
+  "version": "3.2.0",
+  "author": "Konstantinos Pap",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "gatsby": "^2.19.43",
+    "gatsby-plugin-google-analytics": "^2.2.2",
+    "gatsby-plugin-manifest": "^2.3.3",
+    "gatsby-plugin-offline": "^3.1.2",
+    "gatsby-plugin-react-helmet": "^3.1.23",
+    "gatsby-plugin-react-leaflet": "2.0.12",
+    "gatsby-plugin-resolve-src": "^2.0.0",
+    "gatsby-plugin-sass": "^2.1.30",
+    "gatsby-plugin-sitemap": "^2.3.4",
+    "gatsby-source-filesystem": "^2.2.2",
+    "leaflet": "^1.6.0",
+    "node-sass": "^4.13.1",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-helmet": "^5.2.0",
+    "react-leaflet": "^2.6.3",
+    "reactstrap": "^8.4.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.1.0",
+    "babel-preset-gatsby": "^0.2.35",
+    "enzyme": "^3.11.0",
+    "eslint": "^6.8.0",
+    "eslint-config-zurgbot": "^0.0.6",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.1",
+    "prettier-eslint-cli": "^5.0.0"
+  },
+  "keywords": [
+    "COVID-19 Παγκόσμιος χάρτης κρουσμάτων",
+    "Interactive coronavirus χάρτες",
+    "Track COVID19 στη χώρα σου"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "develop": "gatsby develop",
+    "format": "prettier-eslint --eslint-config-path ./config/eslint.config.js --write '**/*.js'",
+    "lint": "eslint -c ./config/eslint.config.js . --ext .js",
+    "serve": "gatsby serve"
+  }
+}
