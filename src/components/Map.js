@@ -1,11 +1,12 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Map as BaseMap, TileLayer, ZoomControl } from 'react-leaflet';
+import Control from 'react-leaflet-control';
 import { useConfigureLeaflet, useMapServices, useRefEffect } from 'hooks';
 import { isDomAvailable } from 'lib/util';
 
 const Map = ( props ) => {
-  const { children, className, defaultBaseMap = 'OpenStreetMap', mapEffect, ...rest } = props;
+  const { children, className, defaultBaseMap = 'OpenStreetMap', mapEffect, setfilter,...rest } = props;
 
   const mapRef = useRef();
 
@@ -47,6 +48,14 @@ const Map = ( props ) => {
         { children }
         { basemap && <TileLayer {...basemap} /> }
         <ZoomControl position="bottomright" />
+        <Control position="bottomright" >
+        <button 
+          style={{color: 'red'}}
+          onClick={ () => setfilter(true) }
+        >
+          Απόκρυψη/Εμφάνιση μηδενικών κρουσμάτων
+        </button>
+      </Control>
       </BaseMap>
     </div>
   );

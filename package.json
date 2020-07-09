@@ -1,5 +1,5 @@
 {
-  "name": "Covid19 Greek Camps",
+  "name": "covid19greekcamps",
   "description": "Χάρτης COVID-19 κρουσμάτων στα camps μεταναστών",
   "homepage": "https://kostasp4.sg-host.com/",
   "version": "3.2.0",
@@ -25,6 +25,7 @@
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.0",
     "react-leaflet": "^2.6.3",
+    "react-leaflet-control": "^2.1.2",
     "reactstrap": "^8.4.1"
   },
   "devDependencies": {

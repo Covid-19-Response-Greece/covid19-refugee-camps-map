@@ -1,19 +1,31 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import L from 'leaflet';
-import axios from 'axios';
-import Layout from 'components/Layout';
-import Container from 'components/Container';
-import Map from 'components/Map';
+import React from "react";
+import Helmet from "react-helmet";
+import L from "leaflet";
+import axios from "axios";
+import Layout from "components/Layout";
+import Container from "components/Container";
+import Map from "components/Map";
 
 const LOCATION = {
   lat: 38.814566,
-  lng: 23.067380
+  lng: 23.06738,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
 const DEFAULT_ZOOM = 6.5;
 
 const SecondPage = () => {
+  const [data, setdata] = React.useState([]);
+  const [filter, setfilter] = React.useState(false);
+  React.useEffect(() => {
+    async function fetchData() {
+      const response = await axios.get(
+        "https://api.jsonbin.io/b/5ee9d1a3ccc9877ac37d5cf0/7"
+      );
+
+      setdata(response.data);
+    }
+    fetchData();
+  }, []);
 
   /**
    * mapEffect
@@ -22,40 +34,35 @@ const SecondPage = () => {
    */
 
   async function mapEffect({ leafletElement: map } = {}) {
-    let response;
+    map.locate({ setView: true, maxZoom: 10 });
 
-    map.locate({setView: true, maxZoom: 10});
-
-    try {
-      response = await axios.get('https://api.jsonbin.io/b/5ee9d1a3ccc9877ac37d5cf0/7');
-    } catch(e) {
-      console.log(`Failed to fetch: ${e.message}`, e);
-      return;
-    }
-    /**const { "refugee-camps" : refugeeCamps } = refugeeCamps; */
-    const { data = {} } = response;
     const hasData = Array.isArray(data) && data.length >= 0;
 
-    if ( !hasData ) return;
+    if (!hasData) return;
 
     const geoJson = {
-      type: 'FeatureCollection',
-      features: data.map(
-        (region = {}) => 
-        {
-        const { latitude: lat, longtitude: lng } = region;
-        return {
-          type: 'Feature',
-          properties: {
-            ...region,
-          },
-          geometry: {
-            type: 'Point',
-            coordinates: [ lng, lat ]
-          }
-        }
-      })
-    }
+      type: "FeatureCollection",
+      features: data
+        .filter((element) => {
+          if (element.capacity === null) return false;
+          if (element.total_confirmed_cases === 0 && filter === true)
+            return false;
+          return true;
+        })
+        .map((region = {}) => {
+          const { latitude: lat, longtitude: lng } = region;
+          return {
+            type: "Feature",
+            properties: {
+              ...region,
+            },
+            geometry: {
+              type: "Point",
+              coordinates: [lng, lat],
+            },
+          };
+        }),
+    };
 
     const geoJsonLayers = new L.GeoJSON(geoJson, {
       pointToLayer: (feature = {}, latlng) => {
@@ -64,20 +71,19 @@ const SecondPage = () => {
 
         const {
           capacity,
-          "last update" :lastupdate,
+          "last update": lastupdate,
           description,
           name_gr,
           region_gr,
           total_confirmed_cases,
           total_samples,
-        } = properties
+        } = properties;
 
         casesString = `${capacity}`;
 
-        if ( capacity > 1000 ) {
-          casesString = `${casesString.slice(0, -3)}k+`
+        if (capacity > 1000) {
+          casesString = `${casesString.slice(0, -3)}k+`;
         }
-
 
         const html = `
           <span class="icon-marker">
@@ -92,30 +98,32 @@ const SecondPage = () => {
                 <li><strong>Τελευταία ανανέωση:</strong> ${lastupdate}</li>
               </ul>
             </span>
-            ${ casesString }
+            ${casesString}
           </span>
         `;
 
-        return L.marker( latlng, {
+        return L.marker(latlng, {
           icon: L.divIcon({
-            className: 'icon',
-            html
+            className: "icon",
+            html,
           }),
-          riseOnHover: true
+          riseOnHover: true,
         });
-      }
+      },
     });
 
-    geoJsonLayers.addTo(map)
+    geoJsonLayers.addTo(map);
   }
-
+  const setMappingFilter = () => {
+    setfilter(!filter);
+  };
   const mapSettings = {
     center: CENTER,
-    defaultBaseMap: 'OpenStreetMap',
+    defaultBaseMap: "OpenStreetMap",
     zoom: DEFAULT_ZOOM,
     mapEffect,
-    zoomSnap:0.25,
-    zoomDelta: 0.50,
+    zoomSnap: 0.25,
+    zoomDelta: 0.5,
   };
 
   return (
@@ -124,14 +132,15 @@ const SecondPage = () => {
         <title>COVID-19 στα Camps</title>
       </Helmet>
 
-      <Map {...mapSettings} />
+      {filter && <Map {...mapSettings} setfilter={setMappingFilter} />}
+      {!filter && <Map {...mapSettings} setfilter={setMappingFilter} />}
 
       <Container type="content" className="home-start">
-      <h2>Refugees Camps - Χωρητικότητα και εξέλιξη των Covid19 κρουσμάτων</h2>
-      <pre>
-        
-        </pre>
-      <p>κειμενο</p>
+        <h2>
+          Refugees Camps - Χωρητικότητα και εξέλιξη των Covid19 κρουσμάτων
+        </h2>
+        <pre></pre>
+        <p>κειμενο</p>
         <p className="note">Πηγές DATA: </p>
       </Container>
     </Layout>
@@ -139,7 +148,3 @@ const SecondPage = () => {
 };
 
 export default SecondPage;
-
-
-
-
