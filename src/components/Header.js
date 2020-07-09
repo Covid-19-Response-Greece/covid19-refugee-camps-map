@@ -21,7 +21,7 @@ import {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div>
-      <Navbar fixed="top" color="dark" dark expand="lg">
+      <Navbar style={{height: '70px'}} fixed="top" color="dark" dark expand="lg">
         <NavbarBrand><Link to="/">Στατιστικά στις δομές φιλοξενίας προσφύγων</Link></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -31,6 +31,9 @@ import {
             </NavItem>
             <NavItem>
             <Link to="/geolocate/">Εντοπισμός των Camps στην περιοχή μου</Link>
+            </NavItem>
+            <NavItem>
+            <Link to="/info/">Ποιοι Είμαστε</Link>
             </NavItem>
             <NavItem>
             <a style={{ color: 'greenyellow' }} href="http://kostasp4.sg-host.com/">TIME SERIES</a>

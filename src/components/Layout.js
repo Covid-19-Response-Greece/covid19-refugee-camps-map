@@ -19,7 +19,7 @@ const Layout = ({ children, pageName }) => {
       </Helmet>
       <div className="wrapper">
         <Header />
-        <main>{ children }</main>
+        <main style={{marginTop: '70px'}}>{ children }</main>
         <Footer />
       </div>
     </>
