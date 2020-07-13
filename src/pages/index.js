@@ -20,7 +20,7 @@ const IndexPage = () => {
   React.useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        "https://api.jsonbin.io/b/5ee9d1a3ccc9877ac37d5cf0/7"
+        "https://covid-19-greece.herokuapp.com/refugee-camps"
       );
 
       setdata(response.data["refugees-camps"]);
