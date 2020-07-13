@@ -97,7 +97,7 @@ const IndexPage = () => {
                 <li><strong>Τελευταία ανανέωση:</strong> ${lastupdate}</li>
               </ul>
             </span>
-            ${total_confirmed_cases}
+            ${name_gr}
           </span>
         `;
 
