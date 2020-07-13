@@ -21,9 +21,8 @@ const IndexPage = () => {
     async function fetchData() {
       const response = await axios.get(
         "https://covid-19-greece.herokuapp.com/refugee-camps"
-      );
-
-      setdata(response.data["refugees-camps"]);
+        );
+        setdata(response.data["refugee-camps"]);
     }
     fetchData();
   }, []);
