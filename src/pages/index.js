@@ -23,7 +23,7 @@ const IndexPage = () => {
         "https://api.jsonbin.io/b/5ee9d1a3ccc9877ac37d5cf0/7"
       );
 
-      setdata(response.data);
+      setdata(response.data["refugees-camps"]);
     }
     fetchData();
   }, []);
