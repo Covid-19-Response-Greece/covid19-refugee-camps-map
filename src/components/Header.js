@@ -22,24 +22,22 @@ import {
   return (
     <div>
       <Navbar style={{height: '70px'}} fixed="top" color="dark" dark expand="lg">
-        <NavbarBrand><Link to="/">Στατιστικά στις δομές φιλοξενίας προσφύγων</Link></NavbarBrand>
+        <NavbarBrand><Link to="/">ΣΤΑΤΙΣΤΙΚΑ ΣΤΙΣ ΔΟΜΕΣ ΦΙΛΟΞΕΝΙΑΣ ΠΡΟΣΦΥΓΩΝ</Link></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="container" navbar>
           <NavItem>
-            <Link to="/">Κρούσματα COVID19 ανα δομή</Link>
+            <Link to="covid19camps/">Κρούσματα COVID19 ανα δομή</Link>
             </NavItem>
             <NavItem>
-            <Link to="/geolocate/">Εντοπισμός των Camps στην περιοχή μου</Link>
+            <Link to="/geolocate/">Εντοπισμός των Camps στην περιοχή μου (GEO)</Link>
             </NavItem>
             <NavItem>
-            <Link to="/info/">Ποιοι Είμαστε</Link>
-            </NavItem>
-            <NavItem>
-            <a style={{ color: 'greenyellow' }} href="http://kostasp4.sg-host.com/">TIME SERIES</a>
+            <a style={{ color: 'greenyellow' }} href="/info/">Ποιοι Είμαστε</a>
             </NavItem>
           </Nav>
-          <NavbarText><Button color="success" border-radius= "20" href="http://kostasp4.sg-host.com/" target="_blank">ΣΤΑΤΙΣΤΙΚA</Button>{''}</NavbarText>
+          <NavbarText><Button color="info" border-radius= "20" href="http://kostasp4.sg-host.com/" target="_blank">ΣΤΑΤΙΣΤΙΚΑ</Button>{''}</NavbarText>
+          <NavbarText><Button color="success" border-radius= "20" href="http://kostasp4.sg-host.com/" target="_blank">CHARTS</Button>{''}</NavbarText>
         </Collapse>
       </Navbar>
     </div>
