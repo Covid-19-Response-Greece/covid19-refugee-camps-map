@@ -14,7 +14,6 @@ const CENTER = [LOCATION.lat, LOCATION.lng];
 const DEFAULT_ZOOM = 6.5;
 
 const IndexPage = () => {
-
   const [data, setdata] = React.useState([]);
   const [filter, setfilter] = React.useState(false);
   React.useEffect(() => {
@@ -26,7 +25,7 @@ const IndexPage = () => {
     }
     fetchData();
   }, []);
-  
+
   /**
    * mapEffect
    * @description Fires a callback once the page renders
@@ -35,7 +34,6 @@ const IndexPage = () => {
 
   async function mapEffect({ leafletElement: map } = {}) {
     /**const { "refugee-camps" : refugeeCamps } = refugeeCamps; */
-    console.log(data)
 
     const hasData = Array.isArray(data) && data.length >= 0;
     if (!hasData) return;
@@ -43,8 +41,9 @@ const IndexPage = () => {
       type: "FeatureCollection",
       features: data
         .filter((element) => {
-          if(element.capacity === null) return false
-          if (element.total_confirmed_cases === 0 && filter === true) return false;
+          if (element.capacity === null) return false;
+          if (element.total_confirmed_cases === 0 && filter === true)
+            return false;
           return true;
         })
         .map((region = {}) => {
@@ -123,7 +122,7 @@ const IndexPage = () => {
   };
 
   const setMappingFilter = () => {
-    setfilter(!filter)
+    setfilter(!filter);
   };
 
   return (
