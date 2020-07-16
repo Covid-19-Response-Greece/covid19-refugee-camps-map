@@ -6,3 +6,11 @@
 @import './variables';
 @import './base';
 @import './links';
+
+
+.navbar .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}

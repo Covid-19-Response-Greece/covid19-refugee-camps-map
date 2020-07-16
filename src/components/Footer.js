@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <p>&copy; { new Date().getFullYear() } Covid19 Response Greece | Data provided by National & Kapodistrian University via Coronovirus Greece Api</p>
+        <p>&copy; { new Date().getFullYear() } <a id='pagelink' href="https://www.covid19response.gr/">Covid19 Response Greece</a> | Data provided by <a href="https://en.uoa.gr/" >National &amp; Kapodistrian University </a>via <a href="https://github.com/Covid-19-Response-Greece/covid19-refugee-camps-map">Coronavirus Greece Api</a></p>
       </Container>
     </footer>
   );

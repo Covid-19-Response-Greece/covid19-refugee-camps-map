@@ -11,7 +11,7 @@ const LOCATION = {
   lng: 23.06738,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 6.5;
+const DEFAULT_ZOOM = 6.75;
 
 const FifthPage = () => {
   const [data, setdata] = React.useState([]);
@@ -19,10 +19,10 @@ const FifthPage = () => {
   React.useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        "https://api.jsonbin.io/b/5ee9d1a3ccc9877ac37d5cf0/7"
+        "https://covid-19-greece.herokuapp.com/refugee-camps"
       );
 
-      setdata(response.data);
+      setdata(response.data["refugee-camps"]);
     }
     fetchData();
   }, []);
@@ -43,7 +43,7 @@ const FifthPage = () => {
       features: data
         .filter((element) => {
           if (element.capacity === null) return false;
-          if (element.total_confirmed_cases === 0 && filter === true)
+          if (element.total_confirmed_cases === 0 && filter === false)
             return false;
           return true;
         })

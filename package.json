@@ -3,7 +3,7 @@
   "description": "Χάρτης COVID-19 κρουσμάτων στα camps μεταναστών",
   "homepage": "https://kostasp4.sg-host.com/",
   "version": "3.2.0",
-  "author": "Konstantinos Pap",
+  "author": "covid19 response Greece",
   "dependencies": {
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
@@ -44,9 +44,8 @@
     "prettier-eslint-cli": "^5.0.0"
   },
   "keywords": [
-    "COVID-19 Παγκόσμιος χάρτης κρουσμάτων",
-    "Interactive coronavirus χάρτες",
-    "Track COVID19 στη χώρα σου"
+    "COVID-19 κρουσμάτων στα camps μεταναστών",
+    "Interactive coronavirus χάρτες"
   ],
   "license": "MIT",
   "scripts": {

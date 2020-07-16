@@ -98,7 +98,7 @@ const SecondPage = () => {
                 <li><strong>Τελευταία ανανέωση:</strong> ${lastupdate}</li>
               </ul>
             </span>
-            ${casesString}
+            ${name_gr}
           </span>
         `;
 

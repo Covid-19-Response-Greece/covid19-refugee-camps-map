@@ -11,7 +11,7 @@ const LOCATION = {
   lng: 23.06738,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 6.5;
+const DEFAULT_ZOOM = 6.75;
 
 const IndexPage = () => {
   const [data, setdata] = React.useState([]);
@@ -79,7 +79,7 @@ const IndexPage = () => {
         casesString = `${capacity}`;
 
         if (capacity > 1000) {
-          casesString = `${casesString.slice(0, -3)}k+`;
+          casesString= `${casesString.slice(0, -3)}k+`;
         }
 
         const html = `
@@ -128,18 +128,23 @@ const IndexPage = () => {
   return (
     <Layout pageName="home">
       <Helmet>
-        <title>COVID-19 στα Camps</title>
+        <title>COVID19 ΣΤΙΣ ΔΟΜΕΣ ΦΙΛΟΞΕΝΙΑΣ ΠΡΟΣΦΥΓΩΝ</title>
       </Helmet>
       {filter && <Map {...mapSettings} setfilter={setMappingFilter} />}
       {!filter && <Map {...mapSettings} setfilter={setMappingFilter} />}
 
       <Container type="content" className="home-start">
         <h2>
-          Refugees Camps - Χωρητικότητα και εξέλιξη των Covid19 κρουσμάτων
+        ΣΤΑΤΙΣΤΙΚΑ ΣΤΙΣ ΔΟΜΕΣ ΦΙΛΟΞΕΝΙΑΣ ΠΡΟΣΦΥΓΩΝ
         </h2>
         <pre></pre>
-        <p>κειμενο</p>
-        <p className="note">Πηγές DATA: </p>
+        <p>Περιλαμβάνει: <br></br>
+        Eξέλιξη των Covid19 κρουσμάτων<br></br>
+        Αριθμός Covid19 Tests που έχουν γίνει<br></br>
+        Χωρητικότητα Δομής Φιλοξενίας<br></br>
+        Στατιστικά γραφήματα με ημερολογιακή καταγραφή των κρουσμάτων COVID19 ανα δομή
+        </p>
+        <p className="note">Πηγές DATA: Covid19 Response Greece | Data provided by National & Kapodistrian University via Coronovirus Greece Api </p>
       </Container>
     </Layout>
   );
