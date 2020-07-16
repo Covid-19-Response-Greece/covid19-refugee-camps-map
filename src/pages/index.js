@@ -20,10 +20,9 @@ const IndexPage = () => {
   React.useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        "https://api.jsonbin.io/b/5ee9d1a3ccc9877ac37d5cf0/7"
+        "https://covid-19-greece.herokuapp.com/refugee-camps"
       );
-
-      setdata(response.data);
+      setdata(response.data["refugee-camps"]);
     }
     fetchData();
   }, []);
@@ -36,9 +35,9 @@ const IndexPage = () => {
 
   async function mapEffect({ leafletElement: map } = {}) {
     /**const { "refugee-camps" : refugeeCamps } = refugeeCamps; */
+    console.log(data)
 
     const hasData = Array.isArray(data) && data.length >= 0;
-
     if (!hasData) return;
     const geoJson = {
       type: "FeatureCollection",
