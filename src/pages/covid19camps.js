@@ -11,7 +11,7 @@ const LOCATION = {
   lng: 23.06738,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 6.5;
+const DEFAULT_ZOOM = 6.75;
 
 const FifthPage = () => {
   const [data, setdata] = React.useState([]);
