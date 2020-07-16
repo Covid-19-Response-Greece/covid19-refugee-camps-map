@@ -21,16 +21,20 @@ import {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div>
-      <Navbar style={{height: '70px'}} fixed="top" color="dark" dark expand="lg">
-        <NavbarBrand><Link to="/">ΣΤΑΤΙΣΤΙΚΑ ΣΤΙΣ ΔΟΜΕΣ ΦΙΛΟΞΕΝΙΑΣ ΠΡΟΣΦΥΓΩΝ</Link></NavbarBrand>
+      <Navbar style={{height: '70px'}} fixed="top" color="dark" dark expand="lg"><a href="http://kostasp4.sg-host.com/"><img src="https://christousculpture.com/wp-content/uploads/2020/07/icon.png" alt="" width="50" height="50" /></a>
+        <NavbarBrand>
+        <Link to="/" style={{color: 'white', fontSize: '11px' }}>ΣΤΑΤΙΣΤΙΚΑ ΣΤΙΣ ΔΟΜΕΣ<br></br>ΦΙΛΟΞΕΝΙΑΣ ΠΡΟΣΦΥΓΩΝ</Link></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="container" navbar>
           <NavItem>
-            <Link to="covid19camps/">Κρούσματα COVID19 ανα δομή</Link>
+            <Link to="/" style={{color: 'white'}}>Στατιστικά δομών</Link>
+            </NavItem>
+          <NavItem>
+            <Link to="covid19camps/" style={{color: 'white'}}>Κρούσματα COVID19 ανα δομή</Link>
             </NavItem>
             <NavItem>
-            <Link to="/geolocate/">Εντοπισμός των Camps στην περιοχή μου (GEO)</Link>
+            <Link to="/geolocate/" style={{color: 'white'}}>Εντοπισμός των Camps στην περιοχή μου (Geolocation)</Link>
             </NavItem>
             <NavItem>
             <a style={{ color: 'greenyellow' }} href="/info/">Ποιοι Είμαστε</a>

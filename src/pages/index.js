@@ -80,7 +80,7 @@ const IndexPage = () => {
         casesString = `${capacity}`;
 
         if (capacity > 1000) {
-          casesString = `${casesString.slice(0, -3)}k+`;
+          casesString= `${casesString.slice(0, -3)}k+`;
         }
 
         const html = `
