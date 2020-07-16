@@ -31,7 +31,7 @@ import {
             <Link to="/" style={{color: 'white'}}>Στατιστικά δομών</Link>
             </NavItem>
           <NavItem>
-            <Link to="covid19camps/" style={{color: 'white'}}>Κρούσματα COVID19 ανα δομή</Link>
+            <Link to="/covid19camps/" style={{color: 'white'}}>Κρούσματα COVID19 ανα δομή</Link>
             </NavItem>
             <NavItem>
             <Link to="/geolocate/" style={{color: 'white'}}>Εντοπισμός των Camps στην περιοχή μου (Geolocation)</Link>
