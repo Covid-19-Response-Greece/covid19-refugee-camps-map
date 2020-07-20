@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import L from "leaflet";
+import L, { point } from "leaflet";
 import axios from "axios";
 import Layout from "components/Layout";
 import Container from "components/Container";
@@ -33,7 +33,6 @@ const IndexPage = () => {
    */
 
   async function mapEffect({ leafletElement: map } = {}) {
-    /**const { "refugee-camps" : refugeeCamps } = refugeeCamps; */
 
     const hasData = Array.isArray(data) && data.length >= 0;
     if (!hasData) return;
@@ -102,9 +101,9 @@ const IndexPage = () => {
         return L.marker(latlng, {
           icon: L.divIcon({
             className: "icon",
-            html,
+            html
           }),
-          riseOnHover: true,
+          riseOnHover: true
         });
       },
     });

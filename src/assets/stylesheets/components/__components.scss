@@ -13,4 +13,33 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    
 }
+.btn {
+margin: 0px 0px 0px 5px;
+}
+
+@media only screen and (max-width: 600px){
+    .navbar .container {
+        margin: 20px 0 0 15px;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px){
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background-color: #343a40;
+}
+}
+
+@media only screen and (max-width: 600px){
+    .btn {
+        cursor: pointer;
+        margin: 0px 10px 0px 40px;
+        
+    }
+}
+

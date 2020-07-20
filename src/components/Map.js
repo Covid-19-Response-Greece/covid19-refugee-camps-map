@@ -50,10 +50,10 @@ const Map = ( props ) => {
         <ZoomControl position="bottomright" />
         <Control position="bottomright" >
         <button 
-          style={{color: 'white', backgroundColor:'red', padding:'10px 10px 10px 10px'}}
+          style={{color: 'white', backgroundColor:'red', padding:'10px 10px 10px 10px', borderRadius:'6px'}}
           onClick={ () => setfilter(true) }
         >
-          Απόκρυψη/Εμφάνιση μηδενικών κρουσμάτων
+          Εμφάνιση/Απόκρυψη μηδενικών κρουσμάτων
         </button>
       </Control>
       </BaseMap>
