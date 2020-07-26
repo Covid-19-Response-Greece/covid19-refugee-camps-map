@@ -20,7 +20,7 @@ import {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div>
-      <Navbar style={{height: '70px'}} fixed="top" color="dark" dark expand="lg"><a href="http://kostasp4.sg-host.com/"><img src="https://christousculpture.com/wp-content/uploads/2020/07/icon.png" alt="" width="50" height="50" /></a>
+      <Navbar style={{height: '70px'}} fixed="top" color="dark" dark expand="lg"><a href="https://camps.covid19response.gr"><img src="https://devpap.co.uk/wp-content/uploads/2020/07/icon1.png" alt="" width="50" height="50" /></a>
         <NavbarBrand>
         <Link to="/" style={{color: 'white', fontSize: '11px' }}>ΣΤΑΤΙΣΤΙΚΑ ΣΤΙΣ ΔΟΜΕΣ<br></br>ΦΙΛΟΞΕΝΙΑΣ ΠΡΟΣΦΥΓΩΝ</Link></NavbarBrand>
         <NavbarToggler onClick={toggle} />
