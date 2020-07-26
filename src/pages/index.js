@@ -90,8 +90,8 @@ const IndexPage = () => {
               <li><strong>Χωρητικότητα:</strong> ${capacity}</li>
               <li><strong>Αριθμός Tests:</strong> ${total_samples}</li>
               <li><strong>Κρούσματα COVID19:</strong> ${total_confirmed_cases}</li>
-                <li><i><h3>Camp info:</h3> ${description} </i></li>
-                <li><strong>Τελευταία ανανέωση:</strong> ${lastupdate}</li>
+                <li><i><h2>Camp info:</h2> ${description} </i></li>
+                <li><strong>Τελευταία ενημέρωση:</strong> ${lastupdate}</li>
               </ul>
             </span>
             ${name_gr}

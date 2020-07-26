@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://kostasp3.sg-host.com/',
+    siteUrl: 'https://camps.covid19response.gr',
       title: 'Χάρτης COVID19',
       description: 'Χάρτης COVID-19 κρουσμάτων στα camps μεταναστών',
-      author: 'Konstantinos Pap'
+      author: 'Covid19 Response Greece'
   },
   
   plugins: [
@@ -24,7 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-159939803-4",
+        trackingId: "",
         head: true,
         anonymize: true,
         respectDNT: true,

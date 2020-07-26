@@ -13,7 +13,6 @@ import {
   NavbarText
 } from 'reactstrap';
 
-
 //class Header extends React.component
 
  const Header = () => {
@@ -29,19 +28,16 @@ import {
           <Nav className="container" navbar>
           <NavItem>
             <Link to="/" style={{color: 'white'}}>Στατιστικά δομών</Link>
-            </NavItem>
+          </NavItem>
           <NavItem>
             <Link to="/covid19camps/" style={{color: 'white'}}>Κρούσματα COVID19 ανα δομή</Link>
-            </NavItem>
-            <NavItem>
+          </NavItem>
+          <NavItem>
             <Link to="/geolocate/" style={{color: 'white'}}>Εντοπισμός των Camps στην περιοχή μου (Geolocation)</Link>
-            </NavItem>
-            <NavItem>
-            <a style={{ color: 'greenyellow' }} href="/info/">Ποιοι Είμαστε</a>
-            </NavItem>
+          </NavItem>
           </Nav>
-          <NavbarText><Button color="info" border-radius= "20" href="http://kostasp4.sg-host.com/" target="_blank">ΣΤΑΤΙΣΤΙΚΑ</Button>{''}</NavbarText>
-          <NavbarText><Button color="success" border-radius= "20" href="http://kostasp4.sg-host.com/" target="_blank">CHARTS</Button>{''}</NavbarText>
+          <NavbarText><Button color="success" border-radius= "20" href="http://kostasp5.sg-host.com/">CHARTS</Button>{''}</NavbarText>
+          <NavbarText><Button color="info" border-radius= "20" href="/information/">ΣΧΕΤΙΚΑ</Button>{''}</NavbarText>
         </Collapse>
       </Navbar>
     </div>
