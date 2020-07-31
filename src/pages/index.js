@@ -26,10 +26,6 @@ const IndexPage = () => {
     fetchData();
   }, []);
 
-  /**
-   * mapEffect
-   * @description Fires a callback once the page renders
-   */
 
   async function mapEffect({ leafletElement: map } = {}) {
 
