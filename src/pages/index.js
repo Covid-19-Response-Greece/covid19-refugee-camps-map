@@ -29,7 +29,6 @@ const IndexPage = () => {
   /**
    * mapEffect
    * @description Fires a callback once the page renders
-   * @example Here this is and example of being used to zoom in and set a popup on load
    */
 
   async function mapEffect({ leafletElement: map } = {}) {
