@@ -27,7 +27,7 @@ import {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="container" navbar>
           <NavItem>
-            <Link to="/" style={{color: 'white'}}>Στατιστικά δομών</Link>
+            <Link to="/" style={{color: 'white'}}>Πληροφορίες δομών</Link>
           </NavItem>
           <NavItem>
             <Link to="/covid19camps/" style={{color: 'white'}}>Κρούσματα COVID19 ανα δομή</Link>

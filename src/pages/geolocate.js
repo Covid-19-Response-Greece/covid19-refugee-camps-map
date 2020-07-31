@@ -11,7 +11,7 @@ const LOCATION = {
   lng: 23.06738,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 6.5;
+const DEFAULT_ZOOM = 7.5;
 
 const SecondPage = () => {
   const [data, setdata] = React.useState([]);
@@ -19,7 +19,7 @@ const SecondPage = () => {
   React.useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        "https://api.jsonbin.io/b/5ee9d1a3ccc9877ac37d5cf0/7"
+        "https://covid-19-greece.herokuapp.com/refugee-camps"
       );
 
       setdata(response.data);
@@ -27,14 +27,10 @@ const SecondPage = () => {
     fetchData();
   }, []);
 
-  /**
-   * mapEffect
-   * @description Fires a callback once the page renders
-   * @example Here this is and example of being used to zoom in and set a popup on load
-   */
+  
 
   async function mapEffect({ leafletElement: map } = {}) {
-    map.locate({ setView: true, maxZoom: 10 });
+    map.locate({ setView: true, maxZoom: 16 });
 
     const hasData = Array.isArray(data) && data.length >= 0;
 
@@ -82,7 +78,7 @@ const SecondPage = () => {
         casesString = `${capacity}`;
 
         if (capacity > 1000) {
-          casesString = `${casesString.slice(0, -3)}k+`;
+          casesString = `${casesString.slice(0, -3)}χ+`;
         }
 
         const html = `

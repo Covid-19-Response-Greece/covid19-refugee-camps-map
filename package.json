@@ -2,7 +2,7 @@
   "name": "covid19greekcamps",
   "description": "Χάρτης COVID-19 κρουσμάτων στα camps μεταναστών",
   "homepage": "https://camps.covid19response.gr",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "author": "covid19 response Greece",
   "dependencies": {
     "axios": "^0.19.2",
@@ -47,7 +47,7 @@
     "COVID-19 κρουσμάτων στα camps μεταναστών",
     "Interactive coronavirus χάρτες"
   ],
-  "license": "MIT",
+  "license": "EUPL",
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
