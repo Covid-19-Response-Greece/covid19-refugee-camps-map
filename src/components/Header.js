@@ -36,7 +36,7 @@ import {
             <Link to="/geolocate/" style={{color: 'white'}}>Εντοπισμός των Camps στην περιοχή μου (Geolocation)</Link>
           </NavItem>
           </Nav>
-          <NavbarText><Button color="success" border-radius= "20" href="http://kostasp5.sg-host.com/">CHARTS</Button>{''}</NavbarText>
+          <NavbarText><Button color="success" border-radius= "20" href="http://kostasp5.sg-host.com/">ΓΡΑΦΗΜΑΤΑ</Button>{''}</NavbarText>
           <NavbarText><Button color="info" border-radius= "20" href="/information/">ΣΧΕΤΙΚΑ</Button>{''}</NavbarText>
         </Collapse>
       </Navbar>

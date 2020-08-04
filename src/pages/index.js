@@ -35,7 +35,6 @@ const IndexPage = () => {
       type: "FeatureCollection",
       features: data
         .filter((element) => {
-          if (element.capacity === null) return false;
           if (element.total_confirmed_cases === 0 && filter === true)
             return false;
           return true;

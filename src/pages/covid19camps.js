@@ -27,6 +27,11 @@ const FifthPage = () => {
     fetchData();
   }, []);
 
+  /**
+   * mapEffect
+   * @description Fires a callback once the page renders
+   * @example Here this is and example of being used to zoom in and set a popup on load
+   */
 
   async function mapEffect({ leafletElement: map } = {}) {
     const hasData = Array.isArray(data) && data.length >= 0;
@@ -37,7 +42,6 @@ const FifthPage = () => {
       type: "FeatureCollection",
       features: data
         .filter((element) => {
-          if (element.capacity === null) return false;
           if (element.total_confirmed_cases === 0 && filter === false)
             return false;
           return true;
@@ -84,11 +88,11 @@ const FifthPage = () => {
                 <h3> Camp ${name_gr}</h3>
                 <h3>${region_gr}</h3>
                 <ul>
-                <li>Χωρητικότητα: ${capacity}</li>
+                <h2><li>Χωρητικότητα: ${capacity}</li></h2> 
                 <li><strong>Αριθμός Tests:</strong> ${total_samples}</li>
                 <li><strong>Κρούσματα COVID19:</strong> ${total_confirmed_cases}</li>
-                  <li><i><h2>Camp info:</h2> ${description} </i></li>
-                  <li><strong>Τελευταία ενημέρωση:</strong> ${lastupdate}</li>
+                  <li><i><h3>Camp info:</h3> ${description} </i></li>
+                  <li><strong>Τελευταία ανανέωση:</strong> ${lastupdate}</li>
                 </ul>
               </span>
               ${casesString}
