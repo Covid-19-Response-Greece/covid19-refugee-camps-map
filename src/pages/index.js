@@ -26,11 +26,6 @@ const IndexPage = () => {
     fetchData();
   }, []);
 
-  /**
-   * mapEffect
-   * @description Fires a callback once the page renders
-   * @example Here this is and example of being used to zoom in and set a popup on load
-   */
 
   async function mapEffect({ leafletElement: map } = {}) {
 
@@ -78,7 +73,7 @@ const IndexPage = () => {
         casesString = `${capacity}`;
 
         if (capacity > 1000) {
-          casesString= `${casesString.slice(0, -3)}k+`;
+          casesString= `${casesString.slice(0, -3)}χ+`;
         }
 
         const html = `
@@ -90,8 +85,8 @@ const IndexPage = () => {
               <li><strong>Χωρητικότητα:</strong> ${capacity}</li>
               <li><strong>Αριθμός Tests:</strong> ${total_samples}</li>
               <li><strong>Κρούσματα COVID19:</strong> ${total_confirmed_cases}</li>
-                <li><i><h3>Camp info:</h3> ${description} </i></li>
-                <li><strong>Τελευταία ανανέωση:</strong> ${lastupdate}</li>
+                <li><i><h2>Camp info:</h2> ${description} </i></li>
+                <li><strong>Τελευταία ενημέρωση:</strong> ${lastupdate}</li>
               </ul>
             </span>
             ${name_gr}

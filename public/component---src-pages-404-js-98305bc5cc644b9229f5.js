@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{w2l6:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),l=t.n(a),r=t("7oih"),c=t("VUD3");n.default=function(){return l.a.createElement(r.a,null,l.a.createElement(c.a,{type:"content",className:"text-center"},l.a.createElement("h1",null,"Error"),l.a.createElement("h2",null,"opsss...Αυτή η σελίδα έχει coronavirus :) -  Μείνε Σπίτι"),l.a.createElement("p",null,"H τρέχουσα σελίδα δεν υπάρχει. Επιλέξτε απο το μενού")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-98305bc5cc644b9229f5.js.map

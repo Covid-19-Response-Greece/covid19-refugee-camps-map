@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://kostasp3.sg-host.com/',
+    siteUrl: 'https://camps.covid19response.gr',
       title: 'Χάρτης COVID19',
       description: 'Χάρτης COVID-19 κρουσμάτων στα camps μεταναστών',
-      author: 'Konstantinos Pap'
+      author: 'Covid19 Response Greece'
   },
   
   plugins: [
@@ -24,7 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-159939803-4",
+        trackingId: "",
         head: true,
         anonymize: true,
         respectDNT: true,
@@ -35,11 +35,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `COVID-19 in Greek Refugee Camps`,
-        short_name: `Refugee Camps Greece`,
+        name: `COVID-19 in Refugee Camps`,
+        short_name: `Refugee Camps`,
         start_url: `/`,
-        background_color: `#330066`,
-        theme_color: `#330066`,
+        background_color: `#6666ff`,
+        theme_color: `#6666ff`,
         display: `standalone`,
         cache_busting_mode: `none`,
         icon: `src/images/icon.png`,

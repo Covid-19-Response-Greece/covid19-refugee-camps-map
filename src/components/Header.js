@@ -13,7 +13,6 @@ import {
   NavbarText
 } from 'reactstrap';
 
-
 //class Header extends React.component
 
  const Header = () => {
@@ -21,27 +20,24 @@ import {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div>
-      <Navbar style={{height: '70px'}} fixed="top" color="dark" dark expand="lg"><a href="http://kostasp4.sg-host.com/"><img src="https://christousculpture.com/wp-content/uploads/2020/07/icon.png" alt="" width="50" height="50" /></a>
+      <Navbar style={{height: '70px'}} fixed="top" color="dark" dark expand="lg"><a href="https://camps.covid19response.gr"><img src="https://devpap.co.uk/wp-content/uploads/2020/07/icon1.png" alt="" width="50" height="50" /></a>
         <NavbarBrand>
         <Link to="/" style={{color: 'white', fontSize: '11px' }}>ΣΤΑΤΙΣΤΙΚΑ ΣΤΙΣ ΔΟΜΕΣ<br></br>ΦΙΛΟΞΕΝΙΑΣ ΠΡΟΣΦΥΓΩΝ</Link></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="container" navbar>
           <NavItem>
-            <Link to="/" style={{color: 'white'}}>Στατιστικά δομών</Link>
-            </NavItem>
+            <Link to="/" style={{color: 'white'}}>Πληροφορίες δομών</Link>
+          </NavItem>
           <NavItem>
             <Link to="/covid19camps/" style={{color: 'white'}}>Κρούσματα COVID19 ανα δομή</Link>
-            </NavItem>
-            <NavItem>
+          </NavItem>
+          <NavItem>
             <Link to="/geolocate/" style={{color: 'white'}}>Εντοπισμός των Camps στην περιοχή μου (Geolocation)</Link>
-            </NavItem>
-            <NavItem>
-            <a style={{ color: 'greenyellow' }} href="/info/">Ποιοι Είμαστε</a>
-            </NavItem>
+          </NavItem>
           </Nav>
-          <NavbarText><Button color="info" border-radius= "20" href="http://kostasp4.sg-host.com/" target="_blank">ΣΤΑΤΙΣΤΙΚΑ</Button>{''}</NavbarText>
-          <NavbarText><Button color="success" border-radius= "20" href="http://kostasp4.sg-host.com/" target="_blank">CHARTS</Button>{''}</NavbarText>
+          <NavbarText><Button color="success" border-radius= "20" href="http://kostasp5.sg-host.com/">CHARTS</Button>{''}</NavbarText>
+          <NavbarText><Button color="info" border-radius= "20" href="/information/">ΣΧΕΤΙΚΑ</Button>{''}</NavbarText>
         </Collapse>
       </Navbar>
     </div>

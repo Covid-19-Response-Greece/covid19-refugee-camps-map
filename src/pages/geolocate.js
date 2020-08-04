@@ -11,7 +11,7 @@ const LOCATION = {
   lng: 23.06738,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 6.5;
+const DEFAULT_ZOOM = 7.5;
 
 const SecondPage = () => {
   const [data, setdata] = React.useState([]);
@@ -27,14 +27,10 @@ const SecondPage = () => {
     fetchData();
   }, []);
 
-  /**
-   * mapEffect
-   * @description Fires a callback once the page renders
-   * @example Here this is and example of being used to zoom in and set a popup on load
-   */
+  
 
   async function mapEffect({ leafletElement: map } = {}) {
-    map.locate({ setView: true, maxZoom: 10 });
+    map.locate({ setView: true, maxZoom: 16 });
 
     const hasData = Array.isArray(data) && data.length >= 0;
 
@@ -82,7 +78,7 @@ const SecondPage = () => {
         casesString = `${capacity}`;
 
         if (capacity > 1000) {
-          casesString = `${casesString.slice(0, -3)}k+`;
+          casesString = `${casesString.slice(0, -3)}χ+`;
         }
 
         const html = `
@@ -94,8 +90,8 @@ const SecondPage = () => {
               <li><strong>Χωρητικότητα:</strong> ${capacity}</li>
               <li><strong>Αριθμός Tests:</strong> ${total_samples}</li>
               <li><strong>Κρούσματα COVID19:</strong> ${total_confirmed_cases}</li>
-                <li><i><h3>Camp info:</h3> ${description} </i></li>
-                <li><strong>Τελευταία ανανέωση:</strong> ${lastupdate}</li>
+                <li><i><h2>Camp info:</h2> ${description} </i></li>
+                <li><strong>Τελευταία ενημέρωση::</strong> ${lastupdate}</li>
               </ul>
             </span>
             ${name_gr}
