@@ -80,6 +80,8 @@ const SecondPage = () => {
           casesString = `${casesString.slice(0, -3)}χ+`;
         }
 
+        let capacity_fixed = (capacity === null) ? 'N/A' : capacity
+
         const html = `
           <span class="icon-marker">
             <span class="icon-marker-tooltip">
@@ -124,7 +126,7 @@ const SecondPage = () => {
   return (
     <Layout pageName="home">
       <Helmet>
-        <title>COVID-19 στα Camps</title>
+        <title>Refugee Camps Greece - Covid19</title>
       </Helmet>
 
       {filter && <Map {...mapSettings} setfilter={setMappingFilter} />}
@@ -132,11 +134,17 @@ const SecondPage = () => {
 
       <Container type="content" className="home-start">
         <h2>
-          Refugees Camps - Χωρητικότητα και εξέλιξη των Covid19 κρουσμάτων
+        ΣΤΑΤΙΣΤΙΚΑ ΣΤΙΣ ΔΟΜΕΣ ΦΙΛΟΞΕΝΙΑΣ ΠΡΟΣΦΥΓΩΝ
         </h2>
         <pre></pre>
-        <p>κειμενο</p>
-        <p className="note">Πηγές DATA: </p>
+        <p>Περιλαμβάνει: <br></br>
+        Eξέλιξη των Covid19 κρουσμάτων<br></br>
+        Αριθμός Covid19 Tests που έχουν γίνει<br></br>
+        Χωρητικότητα Δομής Φιλοξενίας<br></br>
+        Στατιστικά γραφήματα με ημερολογιακή καταγραφή των κρουσμάτων COVID19 ανά δομή
+        </p>
+        <p>Developed by volunteers of <a href="https://www.covid19response.gr/">Covid-19 Response Greece</a>
+        <br />Data provided by <a href="https://www.uoa.gr/">National &amp; Kapodistrian University of Athens</a> via <a href="https://covid-19-greece.herokuapp.com/">Coronavirus Greece API</a></p>
       </Container>
     </Layout>
   );

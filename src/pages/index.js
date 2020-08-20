@@ -123,7 +123,7 @@ const IndexPage = () => {
   return (
     <Layout pageName="home">
       <Helmet>
-        <title>COVID19 ΣΤΙΣ ΔΟΜΕΣ ΦΙΛΟΞΕΝΙΑΣ ΠΡΟΣΦΥΓΩΝ</title>
+        <title>Refugee Camps Greece - Covid19</title>
       </Helmet>
       {filter && <Map {...mapSettings} setfilter={setMappingFilter} />}
       {!filter && <Map {...mapSettings} setfilter={setMappingFilter} />}
@@ -139,7 +139,8 @@ const IndexPage = () => {
         Χωρητικότητα Δομής Φιλοξενίας<br></br>
         Στατιστικά γραφήματα με ημερολογιακή καταγραφή των κρουσμάτων COVID19 ανά δομή
         </p>
-        <p>Data provided by <a href="https://www.uoa.gr/">National &amp; Kapodistrian University of Athens</a> via <a href="https://covid-19-greece.herokuapp.com/">Coronavirus Greece API</a></p>
+        <p>Developed by volunteers of <a href="https://www.covid19response.gr/">Covid-19 Response Greece</a>
+        <br />Data provided by <a href="https://www.uoa.gr/">National &amp; Kapodistrian University of Athens</a> via <a href="https://covid-19-greece.herokuapp.com/">Coronavirus Greece API</a></p>
       </Container>
     </Layout>
   );
