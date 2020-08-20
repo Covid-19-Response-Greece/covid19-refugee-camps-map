@@ -74,17 +74,19 @@ const IndexPage = () => {
         if (capacity > 1000) {
           casesString= `${casesString.slice(0, -3)}χ+`;
         }
+        
+        let capacity_fixed = (capacity === null) ? 'N/A' : capacity
 
         const html = `
           <span class="icon-marker">
             <span class="icon-marker-tooltip">
-              <h3> Camp ${name_gr}</h3>
+              <h3>Δομή ${name_gr}</h3>
               <h3>${region_gr}</h3>
               <ul>
-              <li><strong>Χωρητικότητα:</strong> ${capacity}</li>
+              <li><strong>Χωρητικότητα:</strong> ${capacity_fixed}</li>
               <li><strong>Αριθμός Tests:</strong> ${total_samples}</li>
               <li><strong>Κρούσματα COVID19:</strong> ${total_confirmed_cases}</li>
-                <li><i><h2>Camp info:</h2> ${description} </i></li>
+                <li><i><h2>Πληροφορίες δομής:</h2> ${description} </i></li>
                 <li><strong>Τελευταία ενημέρωση:</strong> ${lastupdate}</li>
               </ul>
             </span>
@@ -135,9 +137,9 @@ const IndexPage = () => {
         Eξέλιξη των Covid19 κρουσμάτων<br></br>
         Αριθμός Covid19 Tests που έχουν γίνει<br></br>
         Χωρητικότητα Δομής Φιλοξενίας<br></br>
-        Στατιστικά γραφήματα με ημερολογιακή καταγραφή των κρουσμάτων COVID19 ανα δομή
+        Στατιστικά γραφήματα με ημερολογιακή καταγραφή των κρουσμάτων COVID19 ανά δομή
         </p>
-        <p className="note">Πηγές DATA: Covid19 Response Greece | Data provided by National & Kapodistrian University via Coronovirus Greece Api </p>
+        <p>Data provided by <a href="https://www.uoa.gr/">National &amp; Kapodistrian University of Athens</a> via <a href="https://covid-19-greece.herokuapp.com/">Coronavirus Greece API</a></p>
       </Container>
     </Layout>
   );

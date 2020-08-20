@@ -31,7 +31,7 @@ const Map = ( props ) => {
   if ( !isDomAvailable()) {
     return (
       <div className={mapClassName}>
-        <p className="map-loading">Φορτώστεεε...</p>
+        <p className="map-loading">Φορτώστε...</p>
       </div>
     );
   }

@@ -82,16 +82,18 @@ const FifthPage = () => {
           casesString = `${casesString.slice(0, -3)}k+`;
         }
 
+        let capacity_fixed = (capacity === null) ? 'N/A' : capacity
+
         const html = `
             <span class="icon-marker">
               <span class="icon-marker-tooltip">
-                <h3> Camp ${name_gr}</h3>
+                <h3>Δομή ${name_gr}</h3>
                 <h3>${region_gr}</h3>
                 <ul>
-                <h2><li>Χωρητικότητα: ${capacity}</li></h2> 
+                <h2><li>Χωρητικότητα: ${capacity_fixed}</li></h2> 
                 <li><strong>Αριθμός Tests:</strong> ${total_samples}</li>
                 <li><strong>Κρούσματα COVID19:</strong> ${total_confirmed_cases}</li>
-                  <li><i><h3>Camp info:</h3> ${description} </i></li>
+                  <li><i><h3>Πληροφορίες δομής:</h3> ${description} </i></li>
                   <li><strong>Τελευταία ανανέωση:</strong> ${lastupdate}</li>
                 </ul>
               </span>
