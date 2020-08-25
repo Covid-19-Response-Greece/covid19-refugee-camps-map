@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{w2l6:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),l=n.n(a),r=n("7oih"),c=n("VUD3");t.default=function(){return l.a.createElement(r.a,null,l.a.createElement(c.a,{type:"content",className:"text-center"},l.a.createElement("h1",null,"Error"),l.a.createElement("p",null,"H τρέχουσα σελίδα δεν υπάρχει. Επιλέξτε απο το μενού")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-1d557f6055a028aef3e1.js.map
