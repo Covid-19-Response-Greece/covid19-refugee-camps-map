@@ -5,8 +5,10 @@
   "version": "3.3.1",
   "author": "covid19 response Greece",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+    "chart.js": "^2.9.3",
     "gatsby": "^2.19.43",
     "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-manifest": "^2.3.3",
@@ -22,6 +24,7 @@
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
+    "react-chartjs-2": "^2.10.0",
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.0",
     "react-leaflet": "^2.6.3",

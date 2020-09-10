@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Container from 'components/Container';
+import '../assets/stylesheets/components/_footer.scss'
 
 const Footer = () => {
   return (
