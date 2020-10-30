@@ -91,7 +91,7 @@ const Chart = ({ data, selectedCamp }) => {
       options={{
         title: {
           display: true,
-          text: `Επιβεβαιωμένα κρούσματα δομής ${selectedCamp}` ,
+          text: `Επιβεβαιωμένα Κρούσματα Δομής ${selectedCamp}` ,
         },
       }}
       data={{
@@ -101,7 +101,7 @@ const Chart = ({ data, selectedCamp }) => {
         datasets: [
           {
             data: selectedCampData.map((data) => data.confirmed_cases),
-            label: "Κρούσματα Covid19",
+            label: "Καμπύλη Κρουσμάτων Covid19",
             borderColor: "rgba(255, 0, 0, 0.5)",
             fill: true,
           },
@@ -129,7 +129,7 @@ const Chart = ({ data, selectedCamp }) => {
         datasets: [
           {
             data: weeklyData.map((data) => data.confirmed_cases),
-            label: "Κρούσματα Covid19",
+            label: "Καμπύλη Κρουσμάτων Covid19",
             borderColor: "red",
             fill: true,
           },
@@ -144,9 +144,9 @@ const Chart = ({ data, selectedCamp }) => {
         {selectedCamp ? barChart : lineChart}
       </div>
       {selectedCamp && selectedCampData[0] ? (
-        <h4>Εβδομαδιαία κατανομή Κρουσμάτων COVID19</h4>
+        <h4>Εβδομαδιαία Κατανομή Κρουσμάτων COVID19</h4>
       ) : null}
-      {!selectedCamp && <h4>Εβδομαδιαία κατανομή Κρουσμάτων COVID19</h4>}
+      {!selectedCamp && <h4>Εβδομαδιαία Κατανομή Κρουσμάτων COVID19</h4>}
     </>
   );
 };

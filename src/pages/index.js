@@ -8,10 +8,10 @@ import Map from "components/Map";
 
 const LOCATION = {
   lat: 38.814566,
-  lng: 23.06738,
+  lng: 24.06738,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 6.75;
+const DEFAULT_ZOOM = 6.60;
 
 const IndexPage = () => {
   const [data, setdata] = React.useState([]);
@@ -112,19 +112,25 @@ const IndexPage = () => {
     defaultBaseMap: "OpenStreetMap",
     zoom: DEFAULT_ZOOM,
     mapEffect,
-    zoomSnap: 0.25,
-    zoomDelta: 0.5,
+    zoomSnap: 0.10,
+    zoomDelta: 0.2,
   };
 
   const setMappingFilter = () => {
     setfilter(!filter);
   };
 
+
+  let sumcases = data.reduce((accumulator, currentValue) => accumulator + currentValue.total_confirmed_cases, 0)
+  console.log(sumcases);
+
+  
   return (
     <Layout pageName="home">
       <Helmet>
         <title>Refugee Camps Greece - Covid19</title>
       </Helmet>
+
       {filter && <Map {...mapSettings} setfilter={setMappingFilter} />}
       {!filter && <Map {...mapSettings} setfilter={setMappingFilter} />}
 

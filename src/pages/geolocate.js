@@ -4,14 +4,14 @@ import L from "leaflet";
 import axios from "axios";
 import Layout from "components/Layout";
 import Container from "components/Container";
-import Map from "components/Map";
+import Map from "components/Mapen";
 
 const LOCATION = {
   lat: 38.814566,
-  lng: 23.06738,
+  lng: 24.06738,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 7.5;
+const DEFAULT_ZOOM = 10;
 
 const SecondPage = () => {
   const [data, setdata] = React.useState([]);
@@ -119,8 +119,8 @@ const SecondPage = () => {
     defaultBaseMap: "OpenStreetMap",
     zoom: DEFAULT_ZOOM,
     mapEffect,
-    zoomSnap: 0.25,
-    zoomDelta: 0.5,
+    zoomSnap: 0.10,
+    zoomDelta: 0.2,
   };
 
   return (

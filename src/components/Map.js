@@ -49,12 +49,18 @@ const Map = ( props ) => {
         { basemap && <TileLayer {...basemap} /> }
         <ZoomControl position="bottomright" />
         <Control position="bottomright" >
-        <button 
-          style={{color: 'white', backgroundColor:'red', padding:'10px 10px 10px 10px', borderRadius:'6px'}}
+        <button type="button" class="btn btn-danger"
+          style={{fontSize:'12px'}}
           onClick={ () => setfilter(true) }
         >
           Εμφάνιση/Απόκρυψη μηδενικών κρουσμάτων
         </button>
+        <p class="lead"></p>
+        <div class="jumbotron">
+        <p class="lead">ΔΟΜΕΣ ΠΡΟΣΦΥΓΩΝ</p>
+  <p>ΜΕ ΤΑ ΠΕΡΙΣΣΟΤΕΡΑ ΚΡΟΥΣΜΑΤΑ</p>
+  <p></p>
+</div>
       </Control>
       </BaseMap>
     </div>

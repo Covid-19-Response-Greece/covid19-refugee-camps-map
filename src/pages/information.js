@@ -7,7 +7,9 @@ const ThirdPage = () => {
   return (
     <Layout>
       <Container type="content" className="">
-        <h2>Σχετικά με την πλατφόρμα Refugee Camps Greece - Covid19</h2>
+        <h2>Σχετικά με την πλατφόρμα Refugee Camps Greece - Covid19
+
+        </h2>
         <p>Η πλατφόρμα Refugee Camps Greece - Covid19 αποτελεί ένα εργαλείο διερεύνησης και οπτικοποίησης δεδομένων που σχετίζονται με την εξάπλωση της πανδημίας του κορωνοϊού, COVID-19, στις δομές φιλοξενίας αιτούντων άσυλο στην Ελλάδα. Αναπτύχθηκε από μέλη της εθελοντικής δράσης 🔗 <a href="https://covid19response.gr/">Covid-19 Response Greece</a> σε συνεργασία με το 🔗 <a href="https://www.uoa.gr/">Εθνικό & Καποδιστριακό Πανεπιστήμιο Αθηνών</a> (ΕΚΠΑ). Τα δεδομένα συλλέγονται από αξιόπιστες πηγές (βλέπε "Πηγές Δεδομένων") σε σχεδόν πραγματικό χρόνο.
         </p><br></br>
         <h2>Εθελοντική Δράση Covid-19 Response Greece</h2>

@@ -34,6 +34,14 @@ margin: 0px 0px 0px 5px;
     background-color: #343a40;
 }
 }
+@media only screen and (max-width: 800px){
+    .navbar-collapse {
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+        background-color: #343a40;
+    }
+}
 
 @media only screen and (max-width: 600px){
     .btn {
@@ -41,5 +49,11 @@ margin: 0px 0px 0px 5px;
         margin: 0px 10px 0px 40px;
         
     }
+}
+
+@media only screen and (max-width: 600px){
+.jumbotron {
+    display: none;
+}
 }
 

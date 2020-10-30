@@ -8,10 +8,10 @@ import Map from "components/Map";
 
 const LOCATION = {
   lat: 38.814566,
-  lng: 23.06738,
+  lng: 24.06738,
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
-const DEFAULT_ZOOM = 6.75;
+const DEFAULT_ZOOM = 6.60;
 
 const FifthPage = () => {
   const [data, setdata] = React.useState([]);
@@ -119,8 +119,8 @@ const FifthPage = () => {
     defaultBaseMap: "OpenStreetMap",
     zoom: DEFAULT_ZOOM,
     mapEffect,
-    zoomSnap: 0.25,
-    zoomDelta: 0.5,
+    zoomSnap: 0.10,
+    zoomDelta: 0.2,
   };
   const setMappingFilter = () => {
     setfilter(!filter)
